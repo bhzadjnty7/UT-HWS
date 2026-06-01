@@ -1,0 +1,9 @@
+2025-04-24 17:49:16,516 - INFO - Starting MITM proxy
+2025-04-24 17:49:16,516 - INFO - MITM proxy listening on 127.0.0.1:65433
+2025-04-24 17:49:35,029 - INFO - Tag connected from ('127.0.0.1', 3340)
+2025-04-24 17:49:35,030 - INFO - Connected to reader at 127.0.0.1:65432
+2025-04-24 17:49:35,031 - INFO - Intercepted from reader: M1=8ed68fc87ff599e3da46953d398549c233ec5d4ad2b2ae9977f9980921cc91b2, H1=e84537ee7be4683e13ac682fb06c6e4f73d4827c22c0f5e46bda60ea29c391dc
+2025-04-24 17:49:35,031 - INFO - MITM attack: Modified M1=8ed68fc87ff599e3da46953d398549c233ec5d4ad2b2ae9977f9980921cc914d, H1=e84537ee7be4683e13ac682fb06c6e4f73d4827c22c0f5e46bda60ea29c391dc (unchanged)
+2025-04-24 17:49:35,031 - INFO - No response from tag (connection may have been closed)
+2025-04-24 17:51:29,341 - ERROR - Error in reader_to_tag: [WinError 10054] An existing connection was forcibly closed by the remote host
+2025-04-24 17:51:29,341 - INFO - MITM attack simulation completed

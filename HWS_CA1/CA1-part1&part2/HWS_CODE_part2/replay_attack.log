@@ -1,0 +1,10 @@
+2025-04-24 17:33:48,516 - INFO - Starting Phase 1: Capturing legitimate communication
+2025-04-24 17:33:48,517 - INFO - Connected to RFID reader at 127.0.0.1:65432
+2025-04-24 17:33:48,518 - INFO - Captured M1: 8ed68fc87ff599e3da46953d398549c233ec5d4ad2b2ae9977f9980921cbbfe9, H1: 2bcf4b1a82cd02771cd167934129b4d4824809faf798aa2d2d9fcd0359d27429
+2025-04-24 17:33:48,519 - INFO - Received H3: 8c1a4d16d9ddcc67df6ab3067d3a017f2d7bb67dcf27100ff0c3bff6e51c472c
+2025-04-24 17:33:48,519 - INFO - Phase 1 completed successfully
+2025-04-24 17:33:51,520 - INFO - Starting Phase 2: Performing replay attack
+2025-04-24 17:33:51,521 - INFO - Received new M1': 8ed68fc87ff599e3da46953d398549c233ec5d4ad2b2ae9977f9980921f447ff, H1': f0dbbc3c1fea46352eea30741d3d7b14c3c52776601f7db5bbb55824b31e754e
+2025-04-24 17:33:51,525 - INFO - Replaying M2: 8ed68fc87ff599e3da46953d398549c233ec5d4ad2b2ae9977f99809213ffc3f, H2: 0fccc6da2d09934526a9f1f74ea88398d32d39b1947b455c206ac29c6c871502
+2025-04-24 17:33:51,525 - INFO - Received response: Authentication Failed
+2025-04-24 17:33:51,525 - INFO - Replay attack was detected and prevented
