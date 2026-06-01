@@ -5,6 +5,18 @@
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Logistic%20Regression-orange)
 ![Security](https://img.shields.io/badge/Security-Cryptography-red)
 
+## 📑 Table of Contents
+- [About The Course](#-about-the-course)
+- [Projects Overview](#-projects-overview)
+  - [HW4: IP Watermarking](#hw4-ip-watermarking)
+  - [CA1 - Part 1: PRESENT Block Cipher](#ca1---part-1-present-block-cipher)
+  - [CA1 - Part 2: RFID Mutual Authentication](#ca1---part-2-rfid-mutual-authentication)
+  - [CA2: Physical Unclonable Functions (PUFs)](#ca2-physical-unclonable-functions-pufs)
+  - [CA3: Hardware Trojan Detection](#ca3-hardware-trojan-detection)
+- [Technologies & Tools](#-Technologies-&-Tools)
+- [How to Run](#-how-to-run)
+- [License](#-license)
+
 ## 📌 About the Course
 This repository contains the assignments and practical projects for the **Hardware Security and Trust** course, offered at the **University of Tehran (UT)**, Department of Electrical and Computer Engineering, during the **Spring 2025 (1403-1404)** semester under the supervision of **Dr. Siamak Mohammadi**.
 
@@ -43,7 +55,7 @@ Applying Intellectual Property (IP) protection techniques to digital circuit des
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technologies & Tools
 * **Programming Languages:** Python 3.x, Verilog
 * **Machine Learning & Data:** `scikit-learn`, `numpy`, `matplotlib`
 * **Hardware Security Libs:** `pypuf`
