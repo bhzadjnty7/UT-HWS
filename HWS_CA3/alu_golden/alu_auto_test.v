@@ -1,0 +1,101 @@
+`timescale 1ns / 1ps
+
+module alu_auto_test;
+  reg [7:0] a;
+  reg [7:0] b;
+  reg [1:0] op_code;
+  wire [15:0] out;
+  wire overflow;
+  wire c_out;
+  alu uut(.a(a), .b(b), .op_code(op_code), .out(out), .overflow(overflow), .c_out(c_out));
+  integer fout;
+
+  initial begin
+		// Initialize Inputs
+		a = 0;
+		b = 0;
+		op_code = 0;
+
+	end
+
+  initial begin
+    fout = $fopen("alu_test_results.txt", "w");
+    if(fout==0) $finish;
+    $fwrite(fout, "Results
+=======================
+");
+  end
+  always begin
+    #100 a=8'b00000000; b=8'b11111101; op_code=2'b00; // Expected: out=0000000011111111, c_out=0, overflow=0
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 1, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b00000001; b=8'b11111110; op_code=2'b00; // Expected: out=0000000011111111, c_out=0, overflow=0
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 2, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b00000010; b=8'b11111101; op_code=2'b00; // Expected: out=0000000011111111, c_out=0, overflow=0
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 3, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b10000001; b=8'b10000000; op_code=2'b00; // Expected: out=0000000000000001, c_out=1, overflow=1
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 4, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b01111111; b=8'b00000001; op_code=2'b00; // Expected: out=0000000010000000, c_out=0, overflow=1
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 5, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b01100101; b=8'b00110000; op_code=2'b00; // Expected: out=0000000010010101, c_out=0, overflow=1
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 6, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b11111111; b=8'b11111111; op_code=2'b00; // Expected: out=0000000011111110, c_out=1, overflow=0
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 7, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b10101010; b=8'b11001100; op_code=2'b01; // Expected: out=0000000010001000, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 8, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b11111111; b=8'b00000000; op_code=2'b01; // Expected: out=0000000000000000, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 9, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b00001111; b=8'b11110000; op_code=2'b01; // Expected: out=0000000000000000, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 10, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b11111111; b=8'b11111110; op_code=2'b11; // Expected: out=1111110100000010, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 11, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b11111111; b=8'b11111111; op_code=2'b11; // Expected: out=1111111000000001, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 12, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b00001010; b=8'b00010100; op_code=2'b11; // Expected: out=0000000011001000, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 13, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b00001111; b=8'b00001111; op_code=2'b11; // Expected: out=0000000011100001, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 14, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'bxxxxxxxx; b=8'b00001111; op_code=2'b11; // Expected: out=0000000000000000, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 15, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b00001111; b=8'bxxxxxxxx; op_code=2'b11; // Expected: out=0000000000000000, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 16, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b10000000; b=8'b00000010; op_code=2'b11; // Expected: out=0000000100000000, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 17, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b10101010; b=8'b01010101; op_code=2'b10; // Expected: out=0000000011111111, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 18, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b11111111; b=8'b11111111; op_code=2'b10; // Expected: out=0000000000000000, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 19, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b00000101; b=8'b00001010; op_code=2'b10; // Expected: out=0000000000001111, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 20, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b00000000; b=8'b00000000; op_code=2'bxx; // Expected: out=0000000000000000, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 21, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b11111111; b=8'b11111111; op_code=2'bxx; // Expected: out=0000000000000000, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 22, a, b, op_code, out, c_out, overflow);
+
+    #100 a=8'b00000101; b=8'b00000001; op_code=2'bxx; // Expected: out=0000000000000000, c_out=-, overflow=-
+    $fwrite(fout, "Test %0d: a=%b, b=%b, op=%b => out=%b, c_out=%b, overflow=%b\n", 23, a, b, op_code, out, c_out, overflow);
+
+    $fwrite(fout, "=======================\nAll tests applied.\n");
+    $fclose(fout); $stop;
+  end
+endmodule

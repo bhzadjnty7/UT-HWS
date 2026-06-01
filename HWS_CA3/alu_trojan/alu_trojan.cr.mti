@@ -1,0 +1,88 @@
+{D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/adder_8_bit.v} {1 {vlog -work work -vopt -covercells -cover sbcef4 -stats=none {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/adder_8_bit.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module adder_8_bit
+
+Top level modules:
+	adder_8_bit
+
+} {} {}} {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/alu_auto_test_trojan.v} {2 {vlog -work work -vopt -covercells -cover sbcef4 -stats=none {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/alu_auto_test_trojan.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu_auto_test_trojan
+** Warning: D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/alu_auto_test_trojan.v(15): (vlog-2643) Unterminated string literal continues onto next line.
+
+Top level modules:
+	alu_auto_test_trojan
+
+} {} {}} {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/alu_auto_test_trojan_random.v} {2 {vlog -work work -vopt -cover e4 -stats=none {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/alu_auto_test_trojan_random.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu_auto_test_trojan_random
+** Warning: D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/alu_auto_test_trojan_random.v(15): (vlog-2643) Unterminated string literal continues onto next line.
+
+Top level modules:
+	alu_auto_test_trojan_random
+
+} {} {}} {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/four_to_one_mux.v} {1 {vlog -work work -vopt -covercells -cover sbcef4 -stats=none {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/four_to_one_mux.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module four_to_one_mux
+
+Top level modules:
+	four_to_one_mux
+
+} {} {}} {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/fulladder_1_bit.v} {1 {vlog -work work -vopt -covercells -cover sbcef4 -stats=none {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/fulladder_1_bit.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module fulladder_1_bit
+
+Top level modules:
+	fulladder_1_bit
+
+} {} {}} {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/xor_8_bit.v} {1 {vlog -work work -vopt -covercells -cover sbcef4 -stats=none {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/xor_8_bit.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module xor_8_bit
+
+Top level modules:
+	xor_8_bit
+
+} {} {}} {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/adder_with_overflow.v} {1 {vlog -work work -vopt -covercells -cover sbcef4 -stats=none {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/adder_with_overflow.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module adder_8_bit_with_overflow
+
+Top level modules:
+	adder_8_bit_with_overflow
+
+} {} {}} {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/multi_8_bit.v} {1 {vlog -work work -vopt -covercells -cover sbcef4 -stats=none {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/multi_8_bit.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module multi_8_bit
+
+Top level modules:
+	multi_8_bit
+
+} {} {}} {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/and_8_bit.v} {1 {vlog -work work -vopt -covercells -cover sbcef4 -stats=none {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/and_8_bit.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module and_8_bit
+
+Top level modules:
+	and_8_bit
+
+} {} {}} {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/alu_test.v} {2 {vlog -work work -vopt -covercells -cover sbcef4 -stats=none {D:\Hardware security\CA&HWs\HWS_CA3_810103098\alu_trojan\alu_test.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu_test
+** Warning: D:\Hardware security\CA&HWs\HWS_CA3_810103098\alu_trojan\alu_test.v(38): (vlog-2643) Unterminated string literal continues onto next line.
+
+Top level modules:
+	alu_test
+
+} {} {}} {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/overflow_detection.v} {1 {vlog -work work -vopt -covercells -cover sbcef4 -stats=none {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/overflow_detection.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module overflow_detection
+
+Top level modules:
+	overflow_detection
+
+} {} {}} {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/alu.v} {1 {vlog -work work -vopt -covercells -cover sbcef4 -stats=none {D:/Hardware security/CA&HWs/HWS_CA3_810103098/alu_trojan/alu.v}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}}

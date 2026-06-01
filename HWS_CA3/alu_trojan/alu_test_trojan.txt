@@ -1,0 +1,8 @@
+Results
+=======================
+Test 23: a= 45, b= 61, op=0 => out=    0, c_out=0, overflow=0
+Test 23: a= 45, b= 61, op=1 => out=  105, c_out=0, overflow=0
+Test 23: a= 45, b= 61, op=3 => out=   45, c_out=0, overflow=0
+Test 23: a= 45, b= 61, op=2 => out= 5490, c_out=0, overflow=0
+=======================
+All tests applied.

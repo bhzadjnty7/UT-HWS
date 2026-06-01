@@ -1,0 +1,27 @@
+Results
+=======================
+Test 1: a=00000000, b=11111101, op=00 => out=0000000000000000, c_out=0, overflow=0
+Test 2: a=00000001, b=11111110, op=00 => out=1111111111111101, c_out=0, overflow=0
+Test 3: a=00000010, b=11111101, op=00 => out=1111111111111111, c_out=0, overflow=0
+Test 4: a=10000001, b=10000000, op=00 => out=1111111111111111, c_out=0, overflow=0
+Test 5: a=01111111, b=00000001, op=00 => out=0000000000000000, c_out=1, overflow=1
+Test 6: a=01100101, b=00110000, op=00 => out=0000000000000000, c_out=0, overflow=1
+Test 7: a=11111111, b=11111111, op=00 => out=0000000000000000, c_out=0, overflow=1
+Test 8: a=10101010, b=11001100, op=01 => out=1111111111111110, c_out=1, overflow=0
+Test 9: a=11111111, b=00000000, op=01 => out=1111111110001000, c_out=1, overflow=1
+Test 10: a=00001111, b=11110000, op=01 => out=0000000000000000, c_out=0, overflow=0
+Test 11: a=11111111, b=11111110, op=11 => out=0000000000000000, c_out=0, overflow=0
+Test 12: a=11111111, b=11111111, op=11 => out=0000000000000010, c_out=1, overflow=0
+Test 13: a=00001010, b=00010100, op=11 => out=0000000000000001, c_out=1, overflow=0
+Test 14: a=00001111, b=00001111, op=11 => out=0000000011001000, c_out=0, overflow=0
+Test 15: a=xxxxxxxx, b=00001111, op=11 => out=0000000011100001, c_out=0, overflow=0
+Test 16: a=00001111, b=xxxxxxxx, op=11 => out=xxxxxxxxxxxxxxxx, c_out=x, overflow=1
+Test 17: a=10000000, b=00000010, op=11 => out=xxxxxxxxxxxxxxxx, c_out=x, overflow=1
+Test 18: a=10101010, b=01010101, op=10 => out=0000000100000000, c_out=0, overflow=0
+Test 19: a=11111111, b=11111111, op=10 => out=1111111111111111, c_out=0, overflow=0
+Test 20: a=00000101, b=00001010, op=10 => out=0000000000000000, c_out=1, overflow=0
+Test 21: a=00000000, b=00000000, op=xx => out=0000000000001111, c_out=0, overflow=0
+Test 22: a=11111111, b=11111111, op=xx => out=0000000000000000, c_out=0, overflow=0
+Test 23: a=00000101, b=00000001, op=xx => out=0000000000000000, c_out=1, overflow=0
+=======================
+All tests applied.
