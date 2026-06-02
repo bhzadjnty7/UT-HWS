@@ -129,3 +129,8 @@ python client.py
 ---
 ## 📜 License
 This project is open-source and available under the MIT License. Note that these assignments are strictly for educational purposes as part of the University of Tehran curriculum. Please adhere to the university’s academic integrity policies if you are a current student.
+
+---
+## ⭐️ Support
+
+If you find this repository useful, consider giving it a ⭐️
